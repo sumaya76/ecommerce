@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Modern Sofa",
+      "price": 599,
+      "category": "Living Room",
+      "brand": "Luxe Living",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400",
+      "rating": 4.8,
+      "reviewCount": 120,
+      "badge": "new"
+    },
+    {
+      "id": "2",
+      "title": "Dining Table Set",
+      "price": 899,
+      "category": "Dining",
+      "brand": "Nordic Nest",
+      "image": "https://images.unsplash.com/photo-1558618047-3c8c76bbb17e?w=400",
+      "rating": 4.7,
+      "reviewCount": 89,
+      "badge": "sale"
+    }
+  ],
+  "users": [],
+  "orders": [],
+  "auth": {}
+}

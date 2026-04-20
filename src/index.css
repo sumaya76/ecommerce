@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 30% 98%;
+    --foreground: 220 15% 10%;
+    --card: 35 25% 99%;
+    --card-foreground: 220 15% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 10%;
+    --primary: 220 15% 13%;
+    --primary-foreground: 35 30% 98%;
+    --secondary: 35 15% 93%;
+    --secondary-foreground: 220 15% 13%;
+    --muted: 35 10% 94%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 25 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 15% 90%;
+    --input: 35 15% 90%;
+    --ring: 25 85% 55%;
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 220 20% 7%;
+    --foreground: 35 15% 92%;
+    --card: 220 18% 10%;
+    --card-foreground: 35 15% 92%;
+    --popover: 220 18% 10%;
+    --popover-foreground: 35 15% 92%;
+    --primary: 35 15% 92%;
+    --primary-foreground: 220 20% 7%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 35 15% 92%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 25 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 25 85% 55%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .product-badge {
+    @apply absolute top-3 left-3 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full z-10;
+  }
+  .product-badge-new {
+    @apply product-badge bg-accent text-accent-foreground;
+  }
+  .product-badge-sale {
+    @apply product-badge bg-destructive text-destructive-foreground;
+  }
+  .product-badge-hot {
+    @apply product-badge bg-warning text-warning-foreground;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+  .section-subtitle {
+    @apply text-muted-foreground text-lg mt-2;
+  }
+
+  .glass-effect {
+    @apply bg-background/80 backdrop-blur-md;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-[hsl(15,85%,55%)];
+  }
+}
